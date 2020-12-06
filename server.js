@@ -23,7 +23,7 @@ server.get(/^\/panel.*/, (req,res) =>{
   }
 });
 
-server.use(function(req, res, next) {
+server.use(function(req, next) {
   const api = /^\/api(.*)$/.exec(req.url);
 
   if (api && api.length > 1) {

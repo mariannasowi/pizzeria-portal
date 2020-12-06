@@ -39,6 +39,7 @@ export const select = {
       wrapper: '.hour-picker',
       input: 'input[type="range"]',
       output: '.output',
+      slider: '.rangeSlider',
     },
   },
   cart: {
@@ -63,18 +64,16 @@ export const select = {
     peopleAmount: '.people-amount',
     hoursAmount: '.hours-amount',
     tables: '.floor-plan .table',
-    bookingPhone: '.booking-form [name="phone"]',
-    bookingAddress: '.booking-form [name="address"]',
-    starters: '.booking-form [type="checkbox"]',
     bookingForm: '.booking-form',
+    bookTable: '.booking-form [type="submit"]',
+    bookPhone: '.booking-form [name="phone"]',
+    bookAddress: '.booking-form [name="address"]',
+    starters: '[name="starter"]',
   },
   nav: {
     links: '.main-nav a',
+    images: '.link .nav-link',
   },
-  homeLinks: {
-    order: '.home-order',
-    booking: '.home-booking',
-  }
 };
 
 export const classNames = {
@@ -88,6 +87,7 @@ export const classNames = {
   booking: {
     loading: 'loading',
     tableBooked: 'booked',
+    tableSelected: 'selected',
   },
   nav: {
     active: 'active',
@@ -115,10 +115,10 @@ export const settings = {
   },
   booking: {
     tableIdAttribute: 'data-table',
-    submit: 'btn-secondary',
   },
   db: {
     url: '//localhost:3131/api',
+    // url: '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3131' : ''),
     product: 'product',
     order: 'order',
     booking: 'booking',
