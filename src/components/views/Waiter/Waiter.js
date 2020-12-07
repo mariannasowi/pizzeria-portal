@@ -27,9 +27,6 @@ class Waiter extends React.Component {
 
   tableStatusChange(row) {
     if (row.status === 'free') {
-      row.status = 'thinking';
-    }
-    else if (row.status === 'thinking') {
       row.status = 'ordered';
     }
     else if (row.status === 'ordered') {
@@ -55,13 +52,8 @@ class Waiter extends React.Component {
       case 'free':
         return (
           <>
-            <Button onClick={()=> this.tableStatusChange(row)}>thinking</Button>
-            <Button>new order</Button>
+            <Button onClick={()=> this.tableStatusChange(row)}>new order</Button>
           </>
-        );
-      case 'thinking':
-        return (
-          <Button onClick={()=>this.tableStatusChange(row)}>new order</Button>
         );
       case 'ordered':
         return (
