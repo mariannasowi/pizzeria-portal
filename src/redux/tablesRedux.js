@@ -40,7 +40,7 @@ export const fetchFromAPI = () => {
 export const fetchStatusChange = (row) => {
   return (dispatch) => {
 
-    Axios //wysyla zapytania do ap 
+    Axios
       .put(`${api.url}/${api.tables}/${row.id}`, row)
       .then(res => {
         dispatch(fetchStatus(res.data));
