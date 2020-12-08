@@ -30,7 +30,7 @@ const theme = createMuiTheme({
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter basename={'/panel'}>
+      <BrowserRouter basename={'/1'}>
         <StylesProvider injectFirst>
           <ThemeProvider theme={theme}>
             <MainLayout>
